@@ -17,8 +17,15 @@ public class LoadScreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.load_screen);
-
-        startActivity(new Intent(LoadScreenActivity.this, OnboardingActivity.class));
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                // Переход к главной активности
+                Intent mainIntent = new Intent(LoadScreenActivity.this, OnboardingActivity.class);
+                startActivity(mainIntent);
+                finish();
+            }
+        }, SPLASH_DISPLAY_LENGTH);
 
         //boolean isUserAuthorized = checkUserAuthorization();
 
