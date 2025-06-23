@@ -37,7 +37,7 @@ public class NotificationActivity extends AppCompatActivity {
 
         ListView toDayList = findViewById(R.id.toDayList);
         List<Notification> notifications = new ArrayList<>();
-        // добавьте данные
+  
         notifications.add(new Notification(R.drawable.reward_ico, "Rewards", "5m ago", "Loyal user rewards!\uD83D\uDE18"));
         notifications.add(new Notification(R.drawable.money_send_ico, "Money Transfer", "25m ago", "You have successfully sent money to Maria of..."));
         notifications.add(new Notification(R.drawable.reward_ico, "Rewards", "5m ago", "Loyal user rewards!\uD83D\uDE18"));
@@ -61,7 +61,7 @@ public class NotificationActivity extends AppCompatActivity {
 
         ListView thisWeekList = findViewById(R.id.thisWeekList);
         List<Notification> notificationsWeek = new ArrayList<>();
-        // добавьте данные
+ 
         notificationsWeek.add(new Notification(R.drawable.card_ico, "Payment Notification", "June 22", "Successfully paid!\uD83E\uDD11"));
         notificationsWeek.add(new Notification(R.drawable.money_take_ico, "Top Up", "June 22", "Your top up is successfully!"));
         notificationsWeek.add(new Notification(R.drawable.money_send_ico, "Money Transfer", "June 21", "You have successfully sent money to Maria of..."));
