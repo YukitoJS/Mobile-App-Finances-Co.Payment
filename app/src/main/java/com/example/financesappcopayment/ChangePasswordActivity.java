@@ -99,9 +99,9 @@ public class ChangePasswordActivity extends AppCompatActivity {
                                 null, null, getResources().getDrawable(R.drawable.ic_eye), null);
                         isPasswordVisible[0] = true;
                     }
-                    // Перемещаем курсор в конец текста
+                    
                     passwordEdit.setSelection(passwordEdit.getText().length());
-                    return true; // Обработано касание
+                    return true; 
                 }
             }
             return false;
@@ -109,7 +109,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
 
         passwordConfirmEdit.setOnTouchListener((v, event) -> {
             if (event.getAction() == MotionEvent.ACTION_UP) {
-                // Проверяем, было ли касание по иконке
+                
                 if (event.getRawX() >= (passwordConfirmEdit.getRight() - passwordConfirmEdit.getCompoundPaddingRight())) {
                     // Переключение состояния
                     if (isPasswordVisible[0]) {
@@ -125,9 +125,9 @@ public class ChangePasswordActivity extends AppCompatActivity {
                                 null, null, getResources().getDrawable(R.drawable.ic_eye), null);
                         isPasswordVisible[0] = true;
                     }
-                    // Перемещаем курсор в конец текста
+                    
                     passwordConfirmEdit.setSelection(passwordConfirmEdit.getText().length());
-                    return true; // Обработано касание
+                    return true; 
                 }
             }
             return false;
