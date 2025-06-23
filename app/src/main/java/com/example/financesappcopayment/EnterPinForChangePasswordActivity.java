@@ -26,7 +26,7 @@ public class EnterPinForChangePasswordActivity extends AppCompatActivity {
 
     private String userId;
     private String accessToken;
-    private String correctPin; // Для временной проверки, можно получить из базы
+    private String correctPin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,6 @@ public class EnterPinForChangePasswordActivity extends AppCompatActivity {
         userId = PrefsUtils.getUserId(this);
         accessToken = PrefsUtils.getAccessToken(this);
 
-        // Инициализация элементов
         editTexts[0] = findViewById(R.id.et_digit1);
         editTexts[1] = findViewById(R.id.et_digit2);
         editTexts[2] = findViewById(R.id.et_digit3);
@@ -56,7 +55,7 @@ public class EnterPinForChangePasswordActivity extends AppCompatActivity {
 
         setupEditTexts();
 
-        // Получаем правильный PIN из базы (или сразу делаем проверку)
+        // Получаем правильный PIN из базы
         fetchUserPin();
 
         enterButton.setOnClickListener(v -> {
@@ -76,7 +75,6 @@ public class EnterPinForChangePasswordActivity extends AppCompatActivity {
                 goToChangePassword();
             } else {
                 Toast.makeText(this, "Неверный PIN", Toast.LENGTH_SHORT).show();
-                // Можно очистить поля или оставить
             }
         });
     }
