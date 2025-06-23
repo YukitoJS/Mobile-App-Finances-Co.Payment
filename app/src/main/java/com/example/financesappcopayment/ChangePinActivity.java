@@ -102,7 +102,7 @@ public class ChangePinActivity extends AppCompatActivity {
             public void onSuccess(String message) {
                 runOnUiThread(() -> {
                     Toast.makeText(ChangePinActivity.this, message, Toast.LENGTH_SHORT).show();
-                    // После успешного сохранения переходим дальше
+                    
                     goToProfileScreen();
                 });
             }
