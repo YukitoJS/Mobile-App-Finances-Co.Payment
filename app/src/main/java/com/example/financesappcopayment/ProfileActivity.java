@@ -42,7 +42,7 @@ public class ProfileActivity extends AppCompatActivity {
 
         ListView listView = findViewById(R.id.listView);
         List<Profile> profiles = new ArrayList<>();
-        // добавьте данные
+   
         profiles.add(new Profile(R.drawable.account_info, "Account Info", R.drawable.chevron_right));
         profiles.add(new Profile(R.drawable.lock_ico, "Change Password", R.drawable.chevron_right));
         profiles.add(new Profile(R.drawable.scan_ico, "Change Log In PIN", R.drawable.chevron_right));
@@ -81,7 +81,7 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
 
-        String userId = PrefsUtils.getUserId(ProfileActivity.this); // ваш id пользователя
+        String userId = PrefsUtils.getUserId(ProfileActivity.this);
         if (accessToken != null && userId != null) {
             new SupabaseClient().getUserName(userId, accessToken, new SupabaseClient.CallbackListener() {
                 @Override
