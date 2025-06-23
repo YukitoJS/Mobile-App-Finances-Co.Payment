@@ -26,23 +26,5 @@ public class LoadScreenActivity extends AppCompatActivity {
                 finish();
             }
         }, SPLASH_DISPLAY_LENGTH);
-
-        //boolean isUserAuthorized = checkUserAuthorization();
-
-        //new Handler().postDelayed(() -> {
-            //if (isUserAuthorized) {
-                // Пользователь авторизован, переходим к основной активности
-               //startActivity(new Intent(LoadScreenActivity.this, MainActivity.class));
-            //} else {
-                // Пользователь не авторизован, показываем приветственный экран
-                //startActivity(new Intent(LoadScreenActivity.this, OnboardingActivity.class));
-           // }
-            //finish();
-        //}, SPLASH_DISPLAY_LENGTH);
     }
-
-    //private boolean checkUserAuthorization() {
-        //Здесь логика проверки авторизации
-        //return false;
-    //}
 }
