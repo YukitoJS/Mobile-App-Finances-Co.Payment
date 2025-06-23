@@ -36,7 +36,6 @@ public class PinActivity extends AppCompatActivity {
         accessToken = getIntent().getStringExtra("accessToken");
 
         if (userId == null || accessToken == null) {
-            // Обработка ошибки, например, завершить активность или запросить авторизацию снова
             Toast.makeText(this, "Пользователь не авторизован", Toast.LENGTH_SHORT).show();
             finish();
             return;
@@ -67,7 +66,6 @@ public class PinActivity extends AppCompatActivity {
                 }
                 pin += digit;
             }
-            // После сбора PIN вызываем метод сохранения
             savePinAndProceed(pin);
         });
     }
@@ -115,8 +113,7 @@ public class PinActivity extends AppCompatActivity {
             @Override
             public void onSuccess(String message) {
                 runOnUiThread(() -> {
-                    Toast.makeText(PinActivity.this, message, Toast.LENGTH_SHORT).show();
-                    // После успешного сохранения переходим дальше
+                    Toast.makeText(PinActivity.this, message, Toast.LENGTH_SHORT).show();е
                     goToMainScreen();
                 });
             }
