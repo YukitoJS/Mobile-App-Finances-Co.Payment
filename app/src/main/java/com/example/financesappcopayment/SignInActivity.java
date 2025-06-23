@@ -64,7 +64,7 @@ public class SignInActivity extends AppCompatActivity {
                     return;
                 }
 
-                // Вызов метода signIn
+            
                 supabaseClient.signIn("", email, password, new SupabaseClient.CallbackListener() {
                     @Override
                     public void onSuccess(String message) {
@@ -80,11 +80,11 @@ public class SignInActivity extends AppCompatActivity {
                                     return;
                                 }
 
-                                // Сохраняем в Preferences
+                            
                                 PrefsUtils.saveAccessToken(SignInActivity.this, accessToken);
                                 PrefsUtils.saveUserId(SignInActivity.this, userId);
 
-                                // Проверка PIN и дальнейшие действия...
+                            
                                 new SupabaseClient().checkUserPin(userId, accessToken, new SupabaseClient.CallbackListener() {
                                     @Override
                                     public void onSuccess(String pin) {
