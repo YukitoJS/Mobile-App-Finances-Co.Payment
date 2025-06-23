@@ -15,6 +15,60 @@
         android:theme="@style/Theme.FinancesAppCoPayment"
         tools:targetApi="31">
         <activity
+            android:name=".NewCardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MyCardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EnterPinForChangePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FAQsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChangePinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChangePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditAccountInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AccountInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EnterNewPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OtpVerificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EnterPinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OnBoarding2Activity"
+            android:exported="false" />
+        <activity
             android:name=".OnboardingActivity"
             android:exported="false" />
         <activity
@@ -28,7 +82,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="false" />
     </application>
 
 </manifest>

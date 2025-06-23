@@ -17,25 +17,14 @@ public class LoadScreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.load_screen);
-
-        startActivity(new Intent(LoadScreenActivity.this, OnboardingActivity.class));
-
-        //boolean isUserAuthorized = checkUserAuthorization();
-
-        //new Handler().postDelayed(() -> {
-            //if (isUserAuthorized) {
-                // Пользователь авторизован, переходим к основной активности
-               //startActivity(new Intent(LoadScreenActivity.this, MainActivity.class));
-            //} else {
-                // Пользователь не авторизован, показываем приветственный экран
-                //startActivity(new Intent(LoadScreenActivity.this, OnboardingActivity.class));
-           // }
-            //finish();
-        //}, SPLASH_DISPLAY_LENGTH);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                // Переход к Onboarding
+                Intent mainIntent = new Intent(LoadScreenActivity.this, OnboardingActivity.class);
+                startActivity(mainIntent);
+                finish();
+            }
+        }, SPLASH_DISPLAY_LENGTH);
     }
-
-    //private boolean checkUserAuthorization() {
-        //Здесь логика проверки авторизации
-        //return false;
-    //}
 }

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignInActivity">
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="90dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hi There! 👋"
+        android:textSize="28sp"
+        android:fontFamily="@font/roboto_black"
+        android:textColor="#1D3A70"/>
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome back, Sign in to your account"
+        android:textColor="#6B7280"/>
+    <EditText
+        android:maxLines="1"
+        android:paddingLeft="20dp"
+        android:background="@drawable/edittext_for_user_date"
+        android:layout_gravity="center"
+        android:id="@+id/EmailEdit"
+        android:layout_marginTop="32dp"
+        android:layout_width="327dp"
+        android:layout_height="56dp"
+        android:hint="Email"/>
+    <EditText
+        android:maxLines="1"
+        android:paddingLeft="20dp"
+        android:background="@drawable/edittext_for_user_date"
+        app:passwordToggleEnabled="true"
+        android:id="@+id/PasswordEdit"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:layout_width="327dp"
+        android:layout_height="56dp"
+        android:hint="Password"/>
+    <TextView
+        android:id="@+id/forgotPass"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot password?"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_black"
+        android:textColor="#1DAB87"/>
+    <Button
+        android:id="@+id/signInButton"
+        android:layout_gravity="center"
+        android:layout_marginTop="35dp"
+        android:layout_width="327dp"
+        android:layout_height="56dp"
+        android:text="Sign In"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_black"/>
+    <LinearLayout
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/signuptravel1"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don’t have an account? "
+            android:textSize="16sp"
+            android:textColor="#1DAB87"/>
+        <TextView
+            android:id="@+id/signuptravel2"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:fontFamily="@font/roboto_black"
+            android:textSize="16sp"
+            android:textColor="#1DAB87"/>
+    </LinearLayout>
+
+
+</LinearLayout>

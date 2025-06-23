@@ -12,7 +12,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class OnboardingActivity extends AppCompatActivity {
+public class OnBoarding2Activity extends AppCompatActivity {
 
     Button btn1;
     TextView skiptv;
@@ -21,7 +21,7 @@ public class OnboardingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.onboarding);
+        setContentView(R.layout.onboarding2);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -32,7 +32,7 @@ public class OnboardingActivity extends AppCompatActivity {
         skiptv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent mainIntent = new Intent(OnboardingActivity.this, SignInActivity.class);
+                Intent mainIntent = new Intent(OnBoarding2Activity.this, SignInActivity.class);
                 startActivity(mainIntent);
                 finish();
             }
@@ -42,7 +42,7 @@ public class OnboardingActivity extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent mainIntent = new Intent(OnboardingActivity.this, OnBoarding2Activity.class);
+                Intent mainIntent = new Intent(OnBoarding2Activity.this, SignInActivity.class);
                 startActivity(mainIntent);
                 finish();
             }

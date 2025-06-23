@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <!-- Иконка слева -->
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+    <!-- Текстовая часть (название и тип) -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Название (например, "Rewards") -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rewards"
+            android:fontFamily="@font/roboto_black"
+            android:textSize="18sp"
+            android:textColor="#1D3A70" />
+
+        <!-- Тип ("Payment") -->
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loyal user rewards!😘"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"
+            android:textColor="#6B7280" />
+    </LinearLayout>
+
+    <!-- Сумма справа -->
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5m ago"
+        android:textSize="14sp"
+        android:textColor="#6B7280" />
+</LinearLayout>
