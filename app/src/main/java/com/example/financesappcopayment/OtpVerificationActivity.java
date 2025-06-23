@@ -57,14 +57,14 @@ public class OtpVerificationActivity extends AppCompatActivity {
             String namePart = emailOrPhone.substring(0, atIndex);
             String domainPart = emailOrPhone.substring(atIndex);
 
-            // Ограничиваем отображение первых 6 символов
+            
             int visibleChars = Math.min(2, namePart.length());
             String visiblePart = namePart.substring(0, visibleChars);
             String maskedPart = new String(new char[namePart.length() - visibleChars]).replace("\0", "*");
 
             displayEmail = visiblePart + maskedPart + domainPart;
         } else {
-            // Если email не передан или некорректен, показываем просто его
+            
             displayEmail = emailOrPhone != null ? emailOrPhone : "";
         }
 
