@@ -46,8 +46,8 @@ public class AccountInfoActivity extends AppCompatActivity {
             }
         });
 
-        String accessToken = PrefsUtils.getAccessToken(AccountInfoActivity.this); // ваш accessToken
-        String userId = PrefsUtils.getUserId(AccountInfoActivity.this); // ваш id пользователя
+        String accessToken = PrefsUtils.getAccessToken(AccountInfoActivity.this);
+        String userId = PrefsUtils.getUserId(AccountInfoActivity.this);
         if (accessToken != null && userId != null) {
             new SupabaseClient().getUserName(userId, accessToken, new SupabaseClient.CallbackListener() {
                 @Override
