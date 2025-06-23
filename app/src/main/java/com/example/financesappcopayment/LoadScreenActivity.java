@@ -20,11 +20,29 @@ public class LoadScreenActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                // Переход к Onboarding
+                // Переход к главной активности
                 Intent mainIntent = new Intent(LoadScreenActivity.this, OnboardingActivity.class);
                 startActivity(mainIntent);
                 finish();
             }
         }, SPLASH_DISPLAY_LENGTH);
+
+        //boolean isUserAuthorized = checkUserAuthorization();
+
+        //new Handler().postDelayed(() -> {
+            //if (isUserAuthorized) {
+                // Пользователь авторизован, переходим к основной активности
+               //startActivity(new Intent(LoadScreenActivity.this, MainActivity.class));
+            //} else {
+                // Пользователь не авторизован, показываем приветственный экран
+                //startActivity(new Intent(LoadScreenActivity.this, OnboardingActivity.class));
+           // }
+            //finish();
+        //}, SPLASH_DISPLAY_LENGTH);
     }
+
+    //private boolean checkUserAuthorization() {
+        //Здесь логика проверки авторизации
+        //return false;
+    //}
 }
