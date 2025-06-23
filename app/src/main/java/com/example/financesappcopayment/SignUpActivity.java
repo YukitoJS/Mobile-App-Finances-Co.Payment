@@ -101,13 +101,13 @@ public class SignUpActivity extends AppCompatActivity {
         }
 
         if (isValid) {
-            // Выполняем регистрацию через supabase
+            // Выполняем регистрацию
             supabaseClient.signUp(fullName, email, password, new SupabaseClient.CallbackListener() {
                 @Override
                 public void onSuccess(String response) {
                     runOnUiThread(() -> {
                         Toast.makeText(SignUpActivity.this, "Регистрация прошла успешно! Не забудьте подтвердить почту.", Toast.LENGTH_SHORT).show();
-                        // Можно сохранить данные или перейти дальше
+                    
                         startActivity(new Intent(SignUpActivity.this, SignInActivity.class));
                         finish();
                     });
